@@ -1,0 +1,193 @@
+*{
+    padding: 0;
+}
+
+body{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+hr{
+    border: 1px solid black;
+    opacity: 60%;
+}
+
+#header{
+    text-align: center;
+}
+
+.display-area{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto;
+}
+
+.items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3em;
+    margin-right: 20px;
+}
+
+.operation{
+    margin-right: 20px;
+    position: relative;
+}
+
+.box-item{
+    display: grid;
+    border: 1px solid black;
+    height: 0;
+    width: 100%;
+    padding-bottom: 100%;
+}
+
+.box-item>.itemName, .itemPrice,.itemQuantity{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.itemQuantity{
+    padding-top: 2em;
+}
+
+.itemId{
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.itemName{
+    text-align: center;
+}
+
+.transaction #moneyInput{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.transaction h3{
+    text-align: center;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 10px;
+}
+
+.buttons button{
+    margin: 5px;
+}
+
+.purchaseDiv{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#purchaseBtn{
+    width: 100%;
+}
+
+#message{
+    text-align: center;
+}
+
+#userMessage{
+    text-align: center;
+}
+
+label{
+    font-size: 1.5em;
+}
+
+.changeDiv{
+    width: 90%;
+    margin: 0 auto;
+}
+
+#changeBtn{
+    width: 100%;
+    margin-top: 10px
+}
+
+.changeDiv h3{
+    text-align: center;
+}
+
+#change{
+    text-align: center;
+}
+
+.box-item:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px;
+}
+
+@media (max-width: 768px){
+
+    body{
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .items{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-right: 20px;
+    }
+
+    
+    .box-item{
+        display: grid;
+        border: 1px solid black;
+        height: 0;
+        width: 100%;
+        padding-bottom: 100%;
+    }
+
+    .changeDiv{
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .purchaseDiv{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .buttons{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 10px;
+    }
+
+    @media (max-width: 525px){
+    h1{
+        font-size: 1.5em;
+    }
+
+        .display-area{
+            display: grid;
+            grid-template-columns: 55% 45%;
+            grid-template-rows: auto;
+        }
+
+
+        .items{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 2em;
+        }
+
+        .box-item{
+            display: grid;
+            border: 1px solid black;
+            margin: 0 5px 5px 0;  
+            
+        }
+
+    }
+    
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="header">Vending Machine</h1>
+        <hr>
+        <div class="display-area">
+            <div class="items" id="items"> 
+                <div class="box-item">
+                    <span class="itemId">1</span>
+                    <span class="itemName">Snickers</span>
+                    <p class="itemPrice">$1.85</p>
+                    <p class="itemQuantity">Quantity Left: 9</p>
+                </div>
+            </div>
+            <div class="operation">
+                <form>
+                    <div class="transaction form-group">
+                        <h3>Total $ In</h3>
+                        <input type="text" class="form-control" id="moneyInput">
+                    </div>
+                </form>    
+                <div class="buttons">
+                        <button type="button" class="btn btn-light"  onclick="onDollarBtnClicked(1,2)">Add Dollar</button>
+                        <button type="button" class="btn btn-light" onclick="onQuaterBtnClicked()">Add Quater</button>
+                        <button type="button" class="btn btn-light" onclick="onDimeBtnClicked()">Add Dime</button>
+                        <button type="button" class="btn btn-Def"   onclick="onNickelBtnClicked()">Add Nickel</button>
+                </div>
+                <hr>
+                <div class="purchaseDiv">
+                    <form>
+                        <div class="form-group">
+                            <h3 id="message">Messages</h3>
+                            <input type="text" id="userMessage" class="form-control" name="message" >
+                        </div>
+                    </form>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                          <label class="col-md-4 control-label" for="itemId">Item:</label>  
+                          <div class="col-md-8">
+                            <input id="itemId" name="itemId" type="text"class="form-control input-md">
+                         </div>
+                         <div class="col-md-8">
+                            <input type="hidden" id="actualId" name="actualId" class="form-control input-md">
+                         </div>
+                        </div>
+                        <button type="button" id="purchaseBtn" class="btn btn-light" onclick="vendItem()">Make Purchase</button>
+                     </form>
+                </div>
+            
+                <div class="changeDiv">
+                    <hr>
+                    <h3>Change</h3>
+                    <input type="text" class="form-control" id="change">
+                    <button class="btn btn-light" id="changeBtn" onclick="changeReturnBtnClicked()">Change Return</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/home.js"></script>
+</html>
